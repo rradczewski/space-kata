@@ -1,4 +1,5 @@
 var should = require('chai').should();
+var wrap = require('../lib/wrap');
 
 describe('the line wrapping algorithm', function() {
 	it('should return a one-element array for a single line', function() {
@@ -58,25 +59,6 @@ describe('the line wrapping algorithm', function() {
 	});
 });
 
-function wrap(text, width) {
-	if(text.length < width) 
-		return [text];
-	var lastSpace = text.lastIndexOf(' ', width);
-	var lastDash = text.lastIndexOf('-', width-1);
-
-	var leftPart, rightPart;
-
-	if(lastSpace > lastDash) {
-		leftPart = text.left(lastSpace);
-		rightPart = text.right(lastSpace+1);
-	} else {
-		leftPart = text.left(lastDash)+'-';
-		rightPart = text.right(lastDash+1);
-	}
-
-	return [leftPart].concat(wrap(rightPart, width));
-}
-
 
 
 
@@ -93,13 +75,3 @@ describe('The string extensions', function() {
 	});
 
 });
-
-String.prototype.left = function left(width) {
-	return this.substring(0, width);
-}
-
-String.prototype.right = function right(offset) {
-	return this.substring(offset);
-}
-
-
