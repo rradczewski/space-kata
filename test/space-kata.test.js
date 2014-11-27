@@ -7,7 +7,6 @@ describe('the line wrapping algorithm', function() {
 	xit('should split a text with length exceeding the line width into parts', function() {
 	});
 
-
 	xit('should not break a word into chunks. Instead it should move it to the next line', function() {
 	});
 
