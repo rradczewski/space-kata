@@ -27,7 +27,7 @@ describe('the line wrapping algorithm', function() {
 	});
 
 
-	it('a word should not be broken into chunks. Instead move it to the next line', function() {
+	it('should not break a word into chunks. Instead it should move it to the next line', function() {
 		// Given a long text with a break in a word
 		var twoLines = "Hello World, how are you?";
 		
@@ -43,7 +43,7 @@ describe('the line wrapping algorithm', function() {
 		wrappedLines[3].should.equal('you?');
 	});
 
-	it('a word with a dash can be broken into two parts with the dash staying intact', function() {
+	it('should break a word with a dashinto two parts with the dash staying intact', function() {
 		// Given a long text with a word before break with a dash
 		var twoLines = "Hello So-called-world, how are you?";
 
