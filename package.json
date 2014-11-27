@@ -1,0 +1,20 @@
+{
+  "name": "space-kata",
+  "version": "1.0.0",
+  "description": "A kata for wrapping words",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "chai": "^1.10.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.0.1"
+  },
+  "scripts": {
+    "test": "mocha --recursive test/"
+  },
+  "author": "Raimo Radczewski <raimoradczewski@googlemail.com>",
+  "license": "ISC"
+}
